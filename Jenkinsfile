@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm clean-install --unsafe-perm'
+        sh '''npm cache clean --force
+npm install --unsafe-perm'''
       }
     }
 
